@@ -1,3 +1,5 @@
+import Title from '../src/components/title/title'
+
 export default function HomePage() {
-  return <div>Pagina inicial</div>
+  return <Title>Título da pagina</Title>
 }
