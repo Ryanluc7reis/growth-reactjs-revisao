@@ -1,0 +1,9 @@
+$primary-color: #00F0E0;
+
+.title {
+  color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
