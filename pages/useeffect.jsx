@@ -7,7 +7,7 @@ export default function useEffectPage() {
 
   useEffect(() => {
     console.log('componente inicializado')
-  }, [])
+  }, []) // MONTAGEM (Ciclo de vida componente react)
   useEffect(() => {
     async function fetchData() {
       const request = await fetch('https://jsonplaceholder.typicode.com/users')
@@ -21,7 +21,7 @@ export default function useEffectPage() {
   }, [])
   useEffect(() => {
     console.log('Lista modificada')
-  }, [userList])
+  }, [userList]) // ATUALIZAÇÃO(Ciclo de vida componente react)
 
   useEffect(() => {
     const wheelListener = () => {
@@ -30,6 +30,7 @@ export default function useEffectPage() {
     }
     addEventListener('wheel', wheelListener)
     return () => {
+      // DESMONTAGEM (Ciclo de vida componente react)
       removeEventListener('wheel', wheelListener)
     }
   }, [])
